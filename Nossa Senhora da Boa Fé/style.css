@@ -1,0 +1,22 @@
+footer{
+    background-color: rgb(100, 100, 100);
+    margin: 0%;
+    text-align: center;
+}
+#DivFoot{
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    flex-grow: 0px;
+    margin-left: 30%;
+}
+aside{
+    margin-top: 16%;
+    padding-left: 8%;
+}
+
+.LinkContactos{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
