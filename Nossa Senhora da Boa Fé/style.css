@@ -1,22 +1,147 @@
+*{
+    margin: 0%;
+    border-bottom: 0%;
+    border-top: 0%;
+}
+
+body{
+    padding: 0%;
+    margin: 0%;
+}
+
 footer{
     background-color: rgb(100, 100, 100);
     margin: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.FooterInc{
+    position:fixed;
+    width: 100%;
+}
+
+#DivFoot{
+    display:inline-flex;
+    align-content: center;
     text-align: center;
 }
-#DivFoot{
-    display: flex;
-    align-content: flex-end;
-    flex-wrap: wrap;
-    flex-grow: 0px;
-    margin-left: 30%;
+
+.pTextMain2{
+    padding-left: 1%;
+    padding-right: 5%;
 }
-aside{
-    margin-top: 16%;
-    padding-left: 8%;
+
+.pTextMain{
+    padding-left: 1%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+    margin-bottom: 0%;
+}
+
+.ulText{
+    margin-bottom: 0%;
 }
 
 .LinkContactos{
     text-decoration: none;
     color: white;
     font-size: 15px;
+}
+
+article{
+    text-align: left;
+    margin-bottom: 2%;
+    margin-top: 0%;
+    padding-left: 12%;
+}
+
+iframe{
+    margin-top: 5%;
+    padding-left: 15%;
+}
+
+#Redes{
+    margin-top: 5%;
+    padding-left: 10%;
+}
+
+iframe{
+    width: auto;
+    height: 70%;
+}
+
+.navbar {
+  font-size: 90% !important;
+  letter-spacing: 0,5px;
+}
+
+main{
+    text-align: justify;
+    background-color: rgb(40, 40, 40);
+    color: white;
+    margin: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    justify-content: center;
+    height: 100%;
+}
+
+#MainInd{
+    text-align: center;
+}
+
+#PMain{
+    padding: 50px;
+    margin-bottom: 0%;
+}
+
+.ImagensCar{
+    height: 540px;
+    width: auto;
+}
+
+#carouselExampleFade{
+    padding-top: 12px;
+    padding-bottom: 8px;
+}
+
+h2, #TextPres{
+    padding-left: 20px;
+}
+
+#ImaRH{
+    padding-left: 4%;
+    width: 500px;
+    height: auto;
+}
+#NavMenu{
+    padding-left: 290px;
+}
+#NavMenu2{
+    padding-right: 300px;
+}
+
+@media screen and (max-width:600px){
+    #DivFoot, header, ul{
+        font-size: 12px;
+    }
+    iframe{
+        width: auto;
+        height: 40%;
+    }
+    #DivFoot{
+        margin-left: 5%;
+    }
+    aside{
+        size: 20%;
+        
+    }
+    article{
+        size: 20%;
+    }
+    h3{
+        font-size: 5px;
+        color: blueviolet;
+    }
 }
