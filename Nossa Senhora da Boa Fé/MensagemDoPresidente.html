@@ -17,16 +17,16 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="NavGroup">
+            <div class="container-fluid" id="NavDiv">
                 <header>
-                    <a class="navbar-brand" href="index.html"><img src="imagens/Logo.png" alt="Logo"></a>
+                    <a class="navbar-brand" href="index.html"><img src="imagens/Logo.png" alt="Logo" id="ImgLogo"></a>
                 </header>
                 
                 <ul class="nav navbar-nav" id="NavMenu">
-                    <li><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li><a style="font-size: 20px;" class="nav-link active" aria-current="page" href="index.html" id="Home">Home</a></li>
                     <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Direção<span class="caret"></span></a>
+                    <a style="font-size: 20px;" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" id="Direcao">Direção<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" aria-current="page" href="Historia.html">Historia</a></li>
                         <li><a class="dropdown-item" href="MensagemDoPresidente.html">Mensagem do Presidente</a></li>
@@ -40,9 +40,9 @@
 
                     <ul class="nav navbar-nav" id="NavMenu2">
                         <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Informações/Comunicações</a>
+                        <a style="font-size: 20px;" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" id="Informacoes">Informações/Comunicações</a>
                         <ul class="dropdown-menu">
-                            <li><a class="nav-link active" aria-current="page" href="RH.html">Recursos Humanos</a></li>
+                            <li><a class="dropdown-item" aria-current="page" href="RH.html">Recursos Humanos</a></li>
                             <li><a class="dropdown-item" aria-current="page" href="RespostasSociais.html">Respostas Sociais</a></li>
                             <li><a class="dropdown-item" href="ServicoSocial.html">Serviço Social</a></li>
                             <li><a class="dropdown-item" href="AnimacaoSociocultural.html">Animação Sociocultural</a></li>
@@ -53,13 +53,15 @@
                             <li><a class="dropdown-item" href="FichasDeInscricao.html">Fichas de</a></li>
                         </ul>
                         </li>
-                    </ul>    
+                    </ul> 
+                    
+                    <a style="font-size: 20px;" href="" class="nav-link active" aria-current="page" id="Login">Login/Registrar</a>
 
             </div>  
         </nav>
     </header>
 
-    <main>
+    <main id="MainInd">
         <h2 style="font-weight: bold;">Mensagem do Presidente</h2>
         <p class="pTextMain2">O Centro Social e Paroquial de Nossa Senhora da Boa Fé continua a desenvolver a sua atividade dentro de parâmetros estrategicamente bem definidos, tendentes a objetivos viáveis, enquadrados num contexto norteado pelos valores sociais e religiosos pois é a única forma de mantermos o farol da fé e da esperança para a concretização da nossa obra.</p>
         <p class="pTextMain2">Sendo o objetivo principal desta Instituição o bem-estar daqueles que a escolheram como sua casa, toda a nossa a ação é desenvolvida com vista à concretização deste propósito.</p>

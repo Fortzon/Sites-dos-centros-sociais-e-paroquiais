@@ -17,16 +17,16 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="NavGroup">
+            <div class="container-fluid" id="NavDiv">
                 <header>
-                    <a class="navbar-brand" href="index.html"><img src="imagens/Logo.png" alt="Logo"></a>
+                    <a class="navbar-brand" href="index.html"><img src="imagens/Logo.png" alt="Logo" id="ImgLogo"></a>
                 </header>
                 
                 <ul class="nav navbar-nav" id="NavMenu">
-                    <li><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li><a style="font-size: 20px;" class="nav-link active" aria-current="page" href="index.html" id="Home">Home</a></li>
                     <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Direção<span class="caret"></span></a>
+                    <a style="font-size: 20px;" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" id="Direcao">Direção<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" aria-current="page" href="Historia.html">Historia</a></li>
                         <li><a class="dropdown-item" href="MensagemDoPresidente.html">Mensagem do Presidente</a></li>
@@ -40,9 +40,9 @@
 
                     <ul class="nav navbar-nav" id="NavMenu2">
                         <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Informações/Comunicações</a>
+                        <a style="font-size: 20px;" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" id="Informacoes">Informações/Comunicações</a>
                         <ul class="dropdown-menu">
-                            <li><a class="nav-link active" aria-current="page" href="RH.html">Recursos Humanos</a></li>
+                            <li><a class="dropdown-item" aria-current="page" href="RH.html">Recursos Humanos</a></li>
                             <li><a class="dropdown-item" aria-current="page" href="RespostasSociais.html">Respostas Sociais</a></li>
                             <li><a class="dropdown-item" href="ServicoSocial.html">Serviço Social</a></li>
                             <li><a class="dropdown-item" href="AnimacaoSociocultural.html">Animação Sociocultural</a></li>
@@ -55,49 +55,49 @@
                         </li>
                     </ul> 
                     
-                    <a href="">Login/Registrar</a>
+                    <a style="font-size: 20px;" href="" class="nav-link active" aria-current="page" id="Login">Login/Registrar</a>
 
             </div>  
         </nav>
     </header>
 
-    <main id="MainInd">
-        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+    <main >
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="5000">
                     <img src="Imagens/exteriorigreja.jpg" class="ImagensCar" class="d-block w-100" alt="Exterior da Igreja">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 style="font-size: 15px;">Exterior da Igreja Nossa Senhora de Boa Fé</h5>
                     </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="5000">
                     <img src="Imagens/igrejafora.jpg" class="ImagensCar" class="d-block w-100" alt="Exterior da Igreja Aproximado">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 style="font-size: 15px;">Exterior da Igreja Nossa Senhora de Boa Fé</h5>
                     </div>
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item active" data-bs-interval="5000">
                     <img src="Imagens/igrejacomcruz.jpg" class="ImagensCar" class="d-block w-100" alt="Igreja e a Cruz">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Exterior da Igreja Nossa Senhora de Boa Fé</h5>
                     </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="5000">
                     <img src="Imagens/igreja.jpg" class="ImagensCar" class="d-block w-100" alt="Igreja próxima">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Exterior da Igreja Nossa Senhora de Boa Fé</h5>
                     </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="5000">
                     <img src="Imagens/interiorigreja.jpg" class="ImagensCar" class="d-block w-100" alt="Interior da Igreja">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 style="font-size: 15px;">Interior da Igreja Nossa Senhora de Boa Fé</h5>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true" style="color: black;"></span><span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
             </button>
         </div>
 
