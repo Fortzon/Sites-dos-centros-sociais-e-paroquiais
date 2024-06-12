@@ -29,7 +29,6 @@ a{
 body{
     padding: 0%;
     margin: 0%;
-    align-items: stretch;
     background-color: goldenrod
 }
 
@@ -190,23 +189,26 @@ h2, #TextPres{
   color: black;
 }
 
-
-@media screen, (min-width: 576px)  and (max-width: 767.98px)
-{ 
-    
-}
-
-@media screen, (min-width: 768px) and (max-width: 991.98px)
-{ 
-
-}
-
-@media screen, (min-width: 992px) and (max-width: 1199.98px)
-{ 
-
-}
-
-@media screen, (min-width: 1200px)
-{ 
-
+@media screen and (max-width:600px){
+    #DivFoot, header, ul{
+        font-size: 12px;
+    }
+    iframe{
+        width: auto;
+        height: 40%;
+    }
+    #DivFoot{
+        margin-left: 5%;
+    }
+    aside{
+        size: 20%;
+        
+    }
+    article{
+        size: 20%;
+    }
+    h3{
+        font-size: 5px;
+        color: blueviolet;
+    }
 }
