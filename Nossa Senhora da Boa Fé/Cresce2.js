@@ -15,9 +15,13 @@ function Subir2() {
 }
 
 function Descer() {
-    Label[0].style.top = "165.5px"
+    if (Input[0].value == "") {
+        Label[0].style.top = "165.5px"
+    }
 }
 
 function Descer2() {
-    Label[1].style.top = "206px"
+    if (Input[1].value == "") {
+        Label[1].style.top = "218px"
+    }
 }

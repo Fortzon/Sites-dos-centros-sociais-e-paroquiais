@@ -55,7 +55,7 @@ label{
 }
 
 #Apelido{
-    top: 33.5%;
+    top: 35.5%;
 }
 
 #Email,#Password,#Confirmar{
@@ -67,7 +67,7 @@ label{
 }
 
 #Confirmar{
-    top: 38.5%;
+    top: 42.5%;
 }
 
 input [type="text"]{
@@ -77,6 +77,14 @@ input [type="text"]{
     height: 20px;
     background: transparent;
     border-color: black;
+}
+
+#ApelidoTB{
+    margin-top: 10px;
+}
+
+#ConfirmarTB{
+    margin-top: 10px;
 }
 
 #LabelCheck{
@@ -204,4 +212,199 @@ form{
 #EmailLink{
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 576px)
+{ 
+    a, p, label{
+        font-size: 14px;
+    }
+    #Password, #Confirmar{
+        font-size: 10px;
+        left: 5%;
+    }
+    #Nome,#Apelido{
+    left: 36.5%;
+    font-size: 14px;
+    }
+    h1{
+        font-size: 14px;
+    }
+    img{
+        width: 140px;
+        height: auto;
+    }
+    input [type="text"]{
+        width: 10%;
+        height: 20px;
+    }
+    #Criar{
+        padding: 0%;
+    }
+    div{
+        padding: 5%;
+    }
+    #DivLog{
+        text-align: center;
+    }
+    article{
+        padding-right: 0%;
+        text-align: center;
+    }
+    aside{
+        padding-left: 0%;
+    }
+}
+
+@media only screen and (min-width: 576px)
+{
+    a, p, label{
+        font-size: 14px;
+        padding-left: 0%;
+    }
+    #Password, #Confirmar{
+        font-size: 12px;
+        left: 7%;
+    }
+    #Nome,#Apelido{
+    left: 26.5%;
+    font-size: 14px;
+    }
+    h1{
+        font-size: 10px;
+    }
+    img{
+        width: 140px;
+        height: auto;
+    }
+    input [type="text"]{
+        width: 20%;
+        height: 20px;
+    }
+    div{
+        padding: 5%;
+        text-align: center;
+    }
+    #DivLog{
+        text-align: center;
+        padding: 0%;
+    }
+    #DivLogSub, form{
+        text-align: center;
+        padding: 0%;
+    }
+    article, form{
+        padding-right: 0%;
+        text-align: center;
+    }
+    aside{
+        padding-left: 0%;
+    }
+}
+
+@media only screen and (min-width: 768px)
+{
+    a, p, label{
+        font-size: 16px;
+    }
+    #Password, #Confirmar{
+        font-size: 14px;
+        left: 15%;
+    }
+    #Nome,#Apelido{
+    left: 26.5%;
+    font-size: 14px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    img{
+        width: 160px;
+        height: auto;
+    }
+    input [type="text"]{
+        width: 30%;
+        height: 20px;
+    }
+    div{
+        padding: 4%;
+    }
+    article{
+        padding-right: 4%;
+    }
+    aside{
+        padding-left: 4%;
+    }
+}
+
+@media only screen and (min-width: 992px)
+{
+    a, p, label{
+        font-size: 18px;
+        padding: auto;
+    }
+    #Password, #Confirmar{
+        font-size: 16px;
+        left: 25%;
+    }
+    #Nome,#Apelido{
+    left: 58.5%;
+    font-size: 16px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    img{
+        width: 180px;
+        height: auto;
+    }
+    input [type="text"]{
+        width: 40%;
+        height: 20px;
+    }
+    div{
+        padding: 3%;
+    }
+    article{
+        padding-right: 8%;
+    }
+    aside{
+        padding-left: 8%;
+    }
+}
+
+@media only screen and (min-width: 1200px)
+{
+    a, p, label{
+        font-size: 20px;
+        padding: auto;
+    }
+    #Password, #Confirmar{
+        font-size: 18px;
+        left: 42%;
+    }
+    #Nome,#Apelido{
+    left: 60.5%;
+    font-size: 18px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    img{
+        width: 200px;
+        height: auto;
+    }
+    input [type="text"]{
+        width: 100%;
+        height: 20px;
+    }
+    div, form{
+        padding: 2%;
+    }
+    article{
+        padding-right: 12%;
+    }
+    aside{
+        padding-left: 12%;
+    }
 }

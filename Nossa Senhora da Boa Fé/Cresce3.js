@@ -11,13 +11,17 @@ function Subir() {
 }
 
 function Subir2() {
-    Label[1].style.top = "64px"
+    Label[1].style.top = "74px"
 }
 
 function Descer() {
-    Label[0].style.top = "47px"
+    if (Input[0].value == "") {
+        Label[0].style.top = "47px"
+    }
 }
 
 function Descer2() {
-    Label[1].style.top = "87px"
+    if (Input[1].value == "") {
+        Label[1].style.top = "97px"
+    }
 }
