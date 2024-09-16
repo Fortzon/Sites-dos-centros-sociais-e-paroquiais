@@ -7,6 +7,10 @@
     src: url(Fontes/BarlowSemiCondensed-Regular.ttf);
 }
 
+html{
+    background-color: goldenrod;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -15,8 +19,9 @@
     box-sizing: border-box;
 }
 
-p{
+p,li,ul{
     font-family: 'Times New Roman', Times, serif;
+    padding: 0 20px;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -48,14 +53,7 @@ footer{
     background-color: goldenrod
 }
 
-.pTextMain2{
-    padding-left: 1%;
-    padding-right: 5%;
-}
-
 .pTextMain{
-    padding-left: 1%;
-    padding-right: 5%;
     padding-bottom: 1%;
     margin-bottom: 0%;
 }
@@ -87,6 +85,10 @@ iframe{
     height: 70%;
 }
 
+.MenuDiv{
+    display: none;
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -101,19 +103,23 @@ nav {
 
 .navbar{
     height: 100%;
-    max-width: 1250px;
     width: 100%;
     margin: auto;
     display: flex;
-    align-items: center;
+    text-align: left;
     justify-content: space-between;
     padding: 0 50px;
+}
+
+.Fechar{
+    display: none;
 }
 
 .nav-links{
     height: 100%;
     line-height: 70px;
     display: flex;
+    padding: 0;
 }
 
 .links{
@@ -158,6 +164,10 @@ nav {
     transform: rotate(180deg);
 }
 
+li:hover i{
+    transform: rotate(180deg);
+}
+
 .sub-menu{
     position: absolute;
     top: 70px;
@@ -186,8 +196,58 @@ nav {
 .links li:hover .SBF-sub-menu,
 .links li:hover .Direcao-sub-menu,
 .links li:hover .Info-sub-menu,
-.links li:hover .Documentos-sub-menu{
+.links li:hover .Documentos-sub-menu,
+.links #Documentos .Documentos-sub-menu li:hover .PlanoAtividades-sub-menu,
+.links #Documentos .Documentos-sub-menu li:hover .Relatorio-sub-menu{
   display: block;
+}
+
+.sub-sub-menu{
+    position: absolute;
+    top: 0px;
+    left: 242px;
+    line-height: 40px;
+    background-color: goldenrod;
+    border-radius: 0 0 4px 4px;
+    display: none;
+    z-index: 2;
+    padding: 0;
+}
+
+.DivLog{
+    position: absolute;
+    width: auto;
+    top: 232px;
+    margin: auto;
+    padding: 0 10px;
+    z-index: 99;
+    text-align: right;
+    margin-left: 85%;
+}
+
+.Logins{
+    height: 100%;
+    width: auto;
+    align-items: right;
+    text-align: right;
+    justify-content: space-between;
+    position: absolute;
+    padding: 0;
+}
+
+#LoginLi{
+    list-style: none;
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 5px;
+    line-height: 0px;
+}
+
+#LoginLi a{
+    color: aliceblue;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 5px 14px;
 }
 
 main{
@@ -212,7 +272,11 @@ main{
 
 .ImagensCar{
     height: 540px;
-    width: auto;
+    width: 100%;
+}
+
+.slide, .carousel-inner, .active, .carousel-item-start, .carousel-item-end{
+    padding: 0;
 }
 
 #carouselExampleFade{
@@ -220,7 +284,7 @@ main{
     padding-bottom: 8px;
 }
 
-h2, #TextPres{
+h1,h2,h3,h4,h5,h6, #TextPres{
     padding-left: 20px;
 }
 
@@ -235,7 +299,14 @@ h2, #TextPres{
     background-color: rgb(255, 255, 255);
 }
 
-#Home, #Informacoes, #Direcao, #Login{
+#Home{
+    height: 40px;
+    width: 60px;
+    line-height: 40px;
+    padding-left: 5px;
+}
+
+#Home, #Login{
     color: aliceblue;
     font-weight: bold;
     border-top-right-radius: 10px;
@@ -244,8 +315,13 @@ h2, #TextPres{
     border-bottom-left-radius: 10px;
 }
 
+#LogoHeader{
+    text-align: center;
+    background-color: white;
+}
+
 #ImgLogo{
-    width: 100%;
+    width: auto;
     height: 200px;
 }
 
@@ -255,20 +331,6 @@ h2, #TextPres{
   background-image: none;
 }
 
-.carousel-control-next-icon:after
-{
-  content: '>';
-  font-size: 55px;
-  color: black;
-}
-
-.carousel-control-prev-icon:after {
-  content: '<';
-  font-size: 55px;
-  color: black;
-}
-
-/*
 @media only screen and (max-width: 576px)
 {
     #Informacoes{
@@ -342,11 +404,203 @@ h2, #TextPres{
     }
 }
 
+@media only screen and (max-width: 992px) {
+
+    .MenuDiv, .Menu, .bx-menu{
+        display: block;
+    }
+
+    .navbar{
+        background-color: rgba(197, 156, 53, 0.87);
+        height: 100%;
+        padding-left: 0;
+        transition: all 0.5s ease;
+    }
+
+    nav.navbar{
+        position: absolute;
+        top: 210px;
+        height: 120%;
+        width: 100%;
+        max-width: 350px;
+        left: -100%;
+    }
+    
+    nav .navbar .nav-links{
+        position: fixed;
+        align-items: left;
+        text-align: left;
+        top: 210px;
+        display: block;
+        width: 100%;
+        max-width: 270px;
+        background-color:  rgb(218, 165, 32);
+        line-height: 40px;
+        padding-bottom: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.5s ease;
+        z-index: 99;
+    }
+
+    .nav-links{
+        height: 90%;
+    }
+
+    .Fechar{
+        width: 350px;
+        text-align: right;
+        display: block;
+        background-color: transparent;
+        border-color: transparent;
+        left: 50px;
+    }
+
+    .MenuDiv{
+        position: absolute;
+        width: 50%;
+        top: 215px;
+        padding: 0 10px;
+        z-index: 100;
+        display: block;
+    }
+
+    .Menu{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        height: 50px;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    .bx-menu{
+        font-size: 40px;
+        color: white;
+        
+    }
+
+    .bx-x{
+        margin-top: 40px;
+        color: #fff;
+        text-align: right;
+        font-size: 25px;
+        left: 50px;
+    }
+
+    .links{
+        display: block;
+        margin-top: 0;
+        text-align: left;
+    }
+
+    .nav-links li a{
+        color: #fff;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .navbar .bx-menu{
+      font-size: 25px;
+      color: #fff;
+    }
+    
+    .links li{
+        display: block;
+    }
+
+    .links li a{
+        color: #fff;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .links li .arrow{
+        line-height: 40px;
+    }
+
+    .links li .sub-menu .arrow-left{
+        width: 22px;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    .links li:hover i{
+        transform: rotate(180deg);
+    }
+
+    .links li .sub-menu li:hover i{
+        transform: rotate(0deg);
+    }
+
+    li:hover i{
+        transform: rotate(0deg);
+    }
+
+    .sub-menu{
+        position: relative;
+        top: 0;
+        box-shadow: none;
+        display: none;
+    }
+
+    .sub-menu li{
+        border-bottom: none;
+    }
+
+    .sub-menu li a{
+        color: #fff;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .links li:hover .Giesteira-sub-menu,
+    .links li:hover .SBF-sub-menu,
+    .links li:hover .Direcao-sub-menu,
+    .links li:hover .Info-sub-menu,
+    .links li:hover .Documentos-sub-menu,
+    .links #Documentos .Documentos-sub-menu li:hover .PlanoAtividades-sub-menu,
+    .links #Documentos .Documentos-sub-menu li:hover .Relatorio-sub-menu{
+        display: block;
+    }
+
+    .sub-sub-menu{
+        display: none;
+        position: relative;
+        left: 0;
+        width: 250px;
+    }
+
+    .DivLog{
+        padding:0;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .Logins{
+        margin-top: -22px;
+        background-color: goldenrod;
+        padding-top: 15px;
+        height: 100%;
+        height: 50px;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .PrimeiroH{
+        padding-top: 65px;
+        padding-right: 10px;
+    }
+
+    .carousel, .slide{
+         padding-top: 10px;
+    }
+}
+
+
 @media only screen and (min-width: 992px)
 {
-    #Informacoes{
-        content: "Info/Com";
-    }
     a, p{
         font-size: 18px;
         padding: auto;
@@ -354,9 +608,6 @@ h2, #TextPres{
     img{
         width: 180px;
         height: auto;
-    }
-    div{
-        padding: 3%;
     }
     .LinkContactos{
         font-size: 18px;
@@ -371,8 +622,19 @@ h2, #TextPres{
 
 @media only screen and (min-width: 1200px)
 {
-    #Informacoes{
-        content: "Info/Com";
+    nav .navbar{
+        max-width: 100%;
+        padding: 0 25px;
+    }
+    nav .navbar .logo a{
+        font-size: 27px;
+    }
+    nav .navbar .links li{
+        padding: 0 10px;
+        white-space: nowrap;
+    }
+    nav .navbar .links li a{
+        font-size: 15px;
     }
     a, p{
         font-size: 20px;
@@ -381,9 +643,6 @@ h2, #TextPres{
     img{
         width: 200px;
         height: auto;
-    }
-    div{
-        padding: 2%;
     }
     .LinkContactos{
         font-size: 20px;
@@ -395,4 +654,3 @@ h2, #TextPres{
         display: inline-block;
     }
 }
-    */

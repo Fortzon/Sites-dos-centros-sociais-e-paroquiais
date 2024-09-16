@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Social e Paroquial de Nossa Senhora da Boa Fé</title>
 
-    <link rel="logo" href="Imagens/logo.png">
+    <link rel="icon" href="Imagens/Logo.ico">
     
     <!-- Bootstraps: -->
 
@@ -17,48 +17,72 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="NavGroup">
-            <div class="container-fluid" id="NavDiv">
-                <header>
-                    <a class="navbar-brand" href="index.html"><img src="imagens/Logo.png" alt="Logo" id="ImgLogo"></a>
-                </header>
-                
-                <ul class="nav navbar-nav" id="NavMenu">
-                    <li><a style="font-size: 20px;" class="nav-link active" aria-current="page" href="index.html" id="Home">Home</a></li>
-                    <li class="nav-item dropdown">
-                    <a style="font-size: 20px;" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" id="Direcao">Direção<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" aria-current="page" href="Historia.html">Historia</a></li>
-                        <li><a class="dropdown-item" href="MensagemDoPresidente.html">Mensagem do Presidente</a></li>
-                        <li><a class="dropdown-item" href="OrgaosSociais.html">Orgãos Sociais</a></li>
-                        <li><a class="dropdown-item" href="ObjetivosPrincipais.html">Objetivos Principais</a></li>
-                        <li><a class="dropdown-item" href="MissaoVisaoValores.html">Missão/Visão/Valores</a></li>
+        <header id="LogoHeader">
+            <img src="imagens/Logo.png" alt="Logo" id="ImgLogo">
+        </header>
+        <div class="MenuDiv">
+            <button class="Menu">  
+                <i class='bx bx-menu'></i>
+            </button>
+        </div>
+        <nav class="navbar">
+                <button class="Fechar">
+                    <i class="bx bx-x"></i>
+                </button>
+            <div class="nav-links">
+                <ul class="links">
+                    <li><a  href="index.html" id="Home">Home</a></li>
+                    <li>
+                        <a href="#">Direção</a>
+                        <i class='bx bxs-chevron-down arrow'></i>
+                        <ul class="Direcao-sub-menu sub-menu">
+                            <li><a href="Historia.html">Historia</a></li>
+                            <li><a href="MensagemDoPresidente.html">Mensagem do Presidente</a></li>
+                            <li><a href="OrgaosSociais.html">Orgãos Sociais</a></li>
+                            <li><a href="ObjetivosPrincipais.html">Objetivos Principais</a></li>
+                            <li><a href="MissaoVisaoValores.html">Missão/Visão/Valores</a></li>
                         </ul>
-                        </li>
-                    </ul>
-                </ul>
-
-                    <ul class="nav navbar-nav" id="NavMenu2">
-                        <li class="nav-item dropdown">
-                        <a style="font-size: 20px;" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" id="Informacoes">Informações/Comunicações</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" aria-current="page" href="RH.html">Recursos Humanos</a></li>
-                            <li><a class="dropdown-item" aria-current="page" href="RespostasSociais.html">Respostas Sociais</a></li>
-                            <li><a class="dropdown-item" href="ServicoSocial.html">Serviço Social</a></li>
-                            <li><a class="dropdown-item" href="AnimacaoSociocultural.html">Animação Sociocultural</a></li>
-                            <li><a class="dropdown-item" href="ServicoMedicoDeEnfermagem.html">Serviço Médico de Enfermagem</a></li>
-                            <li><a class="dropdown-item" href="Reclamacoes.html">Reclamações</a></li>
-                            <li><a class="dropdown-item" href="PlanoDeAtividadesEOrçamentos.html">Plano de Atividades e Orçamentos</a></li>
-                            <li><a class="dropdown-item" href="RelatórioDeGestãoEContas.html">Relatório de Gestão e Contas</a></li>
-                            <li><a class="dropdown-item" href="FichasDeInscricao.html">Fichas de</a></li>
+                    </li>
+                    <li>
+                        <a href="#">Informações</a>
+                        <i class='bx bxs-chevron-down arrow'></i>
+                        <ul class="Info-sub-menu sub-menu">
+                            <li><a href="RH.html">Recursos Humanos</a></li>
+                            <li><a href="RespostasSociais.html">Respostas Sociais</a></li>
+                            <li><a href="ServicoSocial.html">Serviço Social</a></li>
+                            <li><a href="AnimacaoSociocultural.html">Animação Sociocultural</a></li>
+                            <li><a href="ServicoMedicoDeEnfermagem.html">Serviço Médico de Enfermagem</a></li>
                         </ul>
-                        </li>
-                    </ul> 
-                    
-                    <a style="font-size: 20px;" href="" class="nav-link active" aria-current="page" id="Login">Login/Registrar</a>
-
-            </div>  
+                    </li>
+                    <li id="Documentos">
+                        <a href="#">Documentos</a>
+                        <i class='bx bxs-chevron-down arrow'></i>
+                        <ul class="Documentos-sub-menu sub-menu">
+                            <li><a href="Reclamacoes.html">Reclamações</a></li>
+                            <li>
+                                <a href="#">Plano de Atividades e Orçamentos</a>
+                                <i class='bx bxs-chevron-left arrow-left'></i>
+                                <ul class="PlanoAtividades-sub-menu sub-sub-menu">
+                                    <li><a href="#">Plano de Atividades e Orçamentos</a></li>
+                                </ul>
+                            </li>
+                            <li>    
+                                <a href="#">Relatório de Gestão e Contas</a>
+                                <i class='bx bxs-chevron-left arrow-left'></i>
+                                <ul class="Relatorio-sub-menu sub-sub-menu">
+                                    <li><a href="#">2020</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="FichasDeInscricao.html">Fichas de</a></li>
+                        </ul>
+                    </li> 
+                </ul>       
+            </div>
         </nav>
+        <div class="DivLog">
+            <div class="Logins">
+            </div>
+        </div>
     </header>
 
     <main id="MainInd">
@@ -84,5 +108,6 @@
             
         </div>
     </footer>
+    <script src="sidebar.js"></script>
 </body>
 </html>

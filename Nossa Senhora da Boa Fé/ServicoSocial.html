@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Social e Paroquial de Nossa Senhora da Boa Fé</title>
 
-    <link rel="logo" href="Imagens/logo.png">
+    <link rel="icon" href="Imagens/Logo.ico">
     
     <!-- Bootstraps: -->
 
@@ -14,55 +14,83 @@
     
     <!-- CSS: -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- BoxIcons: -->
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="NavGroup">
-            <div class="container-fluid" id="NavDiv">
-                <header>
-                    <a class="navbar-brand" href="index.html"><img src="imagens/Logo.png" alt="Logo" id="ImgLogo"></a>
-                </header>
-                
-                <ul class="nav navbar-nav" id="NavMenu">
-                    <li><a style="font-size: 20px;" class="nav-link active" aria-current="page" href="index.html" id="Home">Home</a></li>
-                    <li class="nav-item dropdown">
-                    <a style="font-size: 20px;" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" id="Direcao">Direção<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" aria-current="page" href="Historia.html">Historia</a></li>
-                        <li><a class="dropdown-item" href="MensagemDoPresidente.html">Mensagem do Presidente</a></li>
-                        <li><a class="dropdown-item" href="OrgaosSociais.html">Orgãos Sociais</a></li>
-                        <li><a class="dropdown-item" href="ObjetivosPrincipais.html">Objetivos Principais</a></li>
-                        <li><a class="dropdown-item" href="MissaoVisaoValores.html">Missão/Visão/Valores</a></li>
+        <header id="LogoHeader">
+            <a href="index.html"><img src="imagens/Logo.png" alt="Logo" id="ImgLogo"></a>
+        </header>
+        <div class="MenuDiv">
+            <button class="Menu">  
+                <i class='bx bx-menu'></i>
+            </button>
+        </div>
+        <nav class="navbar">
+                <button class="Fechar">
+                    <i class="bx bx-x"></i>
+                </button>
+            <div class="nav-links">
+                <ul class="links">
+                    <li><a  href="index.html" id="Home">Home</a></li>
+                    <li>
+                        <a href="#">Direção</a>
+                        <i class='bx bxs-chevron-down arrow'></i>
+                        <ul class="Direcao-sub-menu sub-menu">
+                            <li><a href="Historia.html">Historia</a></li>
+                            <li><a href="MensagemDoPresidente.html">Mensagem do Presidente</a></li>
+                            <li><a href="OrgaosSociais.html">Orgãos Sociais</a></li>
+                            <li><a href="ObjetivosPrincipais.html">Objetivos Principais</a></li>
+                            <li><a href="MissaoVisaoValores.html">Missão/Visão/Valores</a></li>
                         </ul>
-                        </li>
-                    </ul>
-                </ul>
-
-                    <ul class="nav navbar-nav" id="NavMenu2">
-                        <li class="nav-item dropdown">
-                        <a style="font-size: 20px;" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" id="Informacoes">Informações/Comunicações</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" aria-current="page" href="RH.html">Recursos Humanos</a></li>
-                            <li><a class="dropdown-item" aria-current="page" href="RespostasSociais.html">Respostas Sociais</a></li>
-                            <li><a class="dropdown-item" href="ServicoSocial.html">Serviço Social</a></li>
-                            <li><a class="dropdown-item" href="AnimacaoSociocultural.html">Animação Sociocultural</a></li>
-                            <li><a class="dropdown-item" href="ServicoMedicoDeEnfermagem.html">Serviço Médico de Enfermagem</a></li>
-                            <li><a class="dropdown-item" href="Reclamacoes.html">Reclamações</a></li>
-                            <li><a class="dropdown-item" href="PlanoDeAtividadesEOrçamentos.html">Plano de Atividades e Orçamentos</a></li>
-                            <li><a class="dropdown-item" href="RelatórioDeGestãoEContas.html">Relatório de Gestão e Contas</a></li>
-                            <li><a class="dropdown-item" href="FichasDeInscricao.html">Fichas de</a></li>
+                    </li>
+                    <li>
+                        <a href="#">Informações</a>
+                        <i class='bx bxs-chevron-down arrow'></i>
+                        <ul class="Info-sub-menu sub-menu">
+                            <li><a href="RH.html">Recursos Humanos</a></li>
+                            <li><a href="RespostasSociais.html">Respostas Sociais</a></li>
+                            <li><a href="ServicoSocial.html">Serviço Social</a></li>
+                            <li><a href="AnimacaoSociocultural.html">Animação Sociocultural</a></li>
+                            <li><a href="ServicoMedicoDeEnfermagem.html">Serviço Médico de Enfermagem</a></li>
                         </ul>
-                        </li>
-                    </ul> 
-                    
-                    <a style="font-size: 20px;" href="" class="nav-link active" aria-current="page" id="Login">Login/Registrar</a>
-
-            </div>  
+                    </li>
+                    <li id="Documentos">
+                        <a href="#">Documentos</a>
+                        <i class='bx bxs-chevron-down arrow'></i>
+                        <ul class="Documentos-sub-menu sub-menu">
+                            <li><a href="Reclamacoes.html">Reclamações</a></li>
+                            <li>
+                                <a href="#">Plano de Atividades e Orçamentos</a>
+                                <i class='bx bxs-chevron-left arrow-left'></i>
+                                <ul class="PlanoAtividades-sub-menu sub-sub-menu">
+                                    <li><a href="#">Plano de Atividades e Orçamentos</a></li>
+                                </ul>
+                            </li>
+                            <li>    
+                                <a href="#">Relatório de Gestão e Contas</a>
+                                <i class='bx bxs-chevron-left arrow-left'></i>
+                                <ul class="Relatorio-sub-menu sub-sub-menu">
+                                    <li><a href="#">2020</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="FichasDeInscricao.html">Fichas de</a></li>
+                        </ul>
+                    </li> 
+                </ul>       
+            </div>
         </nav>
+        <div class="DivLog">
+            <div class="Logins">
+            </div>
+        </div>
     </header>
 
     <main id="MainInd">
-        <h1>Serviço Social</h1>
+        <h1 class="PrimeiroH">Serviço Social</h1>
         <p class="pTextMain2">O Serviço Social do Centro Social e Paroquial de Nossa Senhora da Boa Fé pretende que cada cliente seja apoiado de forma a diminuir o impacto que a institucionalização ou integração em novas respostas implica, acompanhando a adaptação ao seu novo contexto de vida.</p>
         <ul class="ulText">
             Desta forma, o Serviço Social tem como objetivos:
@@ -85,9 +113,9 @@
         <div id="DivFoot" class="container-fluid">
             <article>
                 <p>Todos os nossos contactos abaixo!</p>
-                <p><a class="LinkContactos" href="https://maps.app.goo.gl/Dd3haf9BsZnLmyX6A">Nossa Senhora da Boa Fé</a></p>
-                <p><a class="LinkContactos" href="telto:+351 266900020">Telefone +351 266900020</a></p>
-                <p><a class="LinkContactos" href="mailto:centrosocialboafe@hotmail.com">Email: centrosocialboafe@hotmail.com</a></p>
+                <p><a class="LinkContactos" href="https://maps.app.goo.gl/Dd3haf9BsZnLmyX6A" target="_blank">Nossa Senhora da Boa Fé</a></p>
+                <p><a class="LinkContactos" href="telto:+351 266900020" target="_blank">Telefone +351 266900020</a></p>
+                <p><a class="LinkContactos" href="mailto:centrosocialboafe@hotmail.com" target="_blank">Email: centrosocialboafe@hotmail.com</a></p>
             </article>
             
             <aside>
@@ -95,10 +123,11 @@
             </aside>
 
             <aside id="Redes">
-                <a href="https://www.facebook.com/profile.php?id=100077823497898"><img src="imagens/facelogo.png" alt="Facebook Boa Fé" style="width:42px;height:42px;"></a>
+                <a href="https://www.facebook.com/profile.php?id=100077823497898" target="_blank"><img src="imagens/facelogo.png" alt="Facebook Boa Fé" style="width:42px;height:42px;"></a>
             </aside>
             
         </div>
     </footer>
+    <script src="sidebar.js"></script>
 </body>
 </html>
