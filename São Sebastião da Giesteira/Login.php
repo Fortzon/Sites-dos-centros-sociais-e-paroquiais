@@ -7,10 +7,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mysqli = require __DIR__ . "/BaseDados.php";
 
     $sql = sprintf(
-        "SELECT * FROM giesteiraadmin
-        WHERE Email = '%s'",
-        $mysqli->real_escape_string($_POST["Email"])
+        "SELECT a.*, l.level AS level_name
+        FROM giesteiraadmin a
+        JOIN admin_level l ON a.level = l.id
+        WHERE a.email = '%s'",
+        $mysqli->real_escape_string($_POST["email"])
     );
+
 
     $resultado = $mysqli->query($sql);
 
@@ -18,14 +21,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($user) {
 
-        if ($_POST["Password"] == $user["Password"]) {
+        if (password_verify($_POST["password"], $user["password"])) {
             session_start();
 
             session_regenerate_id();
 
-            $_SESSION["user_id"] = $user["Id"];
+            $_SESSION["user_id"] = $user["id"];
+            $_SESSION["level"] = $user["level_name"];
 
-            header("Location: Publicacao.php");
+            header("Location: AdminDashboard.php");
             exit;
         }
     }
@@ -40,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro Social e Paroquial de Nossa Senhora da Boa Fé</title>
+    <title>Centro Social e Paroquial de São Sebastião da Giesteira</title>
     <link rel="icon" href="Imagens/Logo.ico">
 
     <!-- CSS: -->
@@ -51,19 +55,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <form method="post" id="DivLog">
         <div id="DivLogSub">
             <div id="DivSub">
-                <img src="Imagens/Logo.jpg" alt="Logo">
+                <a href="index.php"><img src="Imagens/Logo.jpg" alt="Logo"></a>
                 <h1>Inicie sessão</h1>
-                <?php if ($invalido) :  ?>
+                <?php if ($invalido) : ?>
                 <em>Login Inválido</em>
                 <?php endif ?>
 
                 <div class="DivInfo">
                     <label for="Email" class="EmailLB1">Email</label>
                     <br>
-                    <input type="text" name="Email" id="Email" value="<?= htmlspecialchars($_POST["Email"] ?? "") ?>">
-                    <label for="Password" id="Pass">Palavra-passe</label>
+                    <input type="text" name="email" id="email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
+                    <label for="password" id="Pass">Palavra-passe</label>
                     <br>
-                    <input type="password" name="Password" id="PasswordTB">
+                    <input type="password" name="password" id="PasswordTB">
                     <br>
                     <input type="checkbox" name="Check" id="Check"><label id="LabelCheck" for="Check">Mostrar
                         palavra-passe</l>
@@ -73,6 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <button id="Seguinte">Seguinte</button>
     </form>
     <script src="Cresce.js"></script>
+    <script src="verPass.js"></script>
 </body>
 
 </html>

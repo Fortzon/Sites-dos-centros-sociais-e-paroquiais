@@ -168,6 +168,11 @@ li:hover i{
     transform: rotate(180deg);
 }
 
+.link-nondeco{
+    text-decoration: none;
+    color: black;
+}
+
 .sub-menu{
     position: absolute;
     top: 70px;
@@ -192,13 +197,19 @@ li:hover i{
     font-weight: 500;
 }
 
+.PlanoAtividades-sub-menu, Relatorio-sub-menu, .Noticias-sub-menu{
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
 .links li:hover .Giesteira-sub-menu,
 .links li:hover .SBF-sub-menu,
 .links li:hover .Direcao-sub-menu,
 .links li:hover .Info-sub-menu,
 .links li:hover .Documentos-sub-menu,
 .links #Documentos .Documentos-sub-menu li:hover .PlanoAtividades-sub-menu,
-.links #Documentos .Documentos-sub-menu li:hover .Relatorio-sub-menu{
+.links #Documentos .Documentos-sub-menu li:hover .Relatorio-sub-menu,
+.links li:hover .Noticias-sub-menu {
   display: block;
 }
 
@@ -331,6 +342,16 @@ h1,h2,h3,h4,h5,h6, #TextPres{
   background-image: none;
 }
 
+.news-box{
+    border: 2px solid black;
+    margin-bottom: 20px;
+}
+
+.news-box div{
+    max-height: 200px;
+    overflow: hidden;
+}
+
 @media only screen and (max-width: 576px)
 {
     #Informacoes{
@@ -406,6 +427,10 @@ h1,h2,h3,h4,h5,h6, #TextPres{
 
 @media only screen and (max-width: 992px) {
 
+    .main-noticia{
+        margin-top: 60px;
+    }
+
     .MenuDiv, .Menu, .bx-menu{
         display: block;
     }
@@ -476,7 +501,6 @@ h1,h2,h3,h4,h5,h6, #TextPres{
     .bx-menu{
         font-size: 40px;
         color: white;
-        
     }
 
     .bx-x{

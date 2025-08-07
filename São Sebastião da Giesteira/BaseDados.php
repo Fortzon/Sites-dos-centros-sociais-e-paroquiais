@@ -1,7 +1,7 @@
 <?php
 
 $host = "localhost";
-$dbname = "giesteiralogin_db";
+$dbname = "giesteira";
 $username = "root";
 $password = "";
 
